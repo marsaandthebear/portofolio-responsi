@@ -1,0 +1,36 @@
+.card {
+    width: 12rem; /* Lebar tetap */
+    height: auto; /* Sesuaikan dengan konten */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.26);
+    border: 5px solid var(--orangeCard);
+    box-shadow: var(--boxShadow);
+    border-radius: 20px;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.card > img {
+    transform: scale(0.8); /* Atur ukuran emoji */
+    position: relative;
+    top: -5x; /* Geser emoji lebih ke atas */
+    margin-bottom: -2rem; /* Kurangi jarak ke bawah */
+}
+
+.card span:nth-of-type(1) {
+    margin-top: -10px; /* Kurangi jarak heading ke emoji */
+    font-size: 1rem; /* Sesuaikan ukuran font heading */
+    font-weight: bold; /* Tambahkan efek bold */
+}
+
+.card span:nth-of-type(2) {
+    margin-top: -10x; /* Kurangi jarak detail ke heading */
+    font-size: 0.85rem; /* Sesuaikan ukuran font detail */
+    color: var(--gray); /* Tetapkan warna sesuai kebutuhan */
+}
+
+

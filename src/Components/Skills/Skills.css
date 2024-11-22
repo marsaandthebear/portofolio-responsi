@@ -1,0 +1,81 @@
+.skill {
+    padding: 30px 20px 50px; /* Tambahkan padding untuk kenyamanan */
+    position: relative;
+    overflow: hidden;
+    background: #d3d2d0; /* Background gradasi oranye */
+    border-radius: 25px; /* Tambahkan border-radius pada container */
+    text-align: center; /* Selaraskan semua konten ke tengah */
+    color: black; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Tambahkan shadow untuk depth */
+}
+
+.skill-bx h2 {
+    font-size: 45px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center; /* Heading di tengah */
+}
+
+.skill-bx p {
+    font-size: 500; /* Ukuran deskripsi */
+    line-height: 1.8; /* Jarak antar baris */
+    max-width: 600px; /* Batasi lebar teks untuk 3 baris */
+    margin: 0 auto 30px auto; /* Teks di tengah dengan margin bawah */
+    text-align: center; /* Selaraskan teks ke tengah */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Efek Glassmorphism */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Efek bola melayang */
+.skill::before,
+.skill::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(230, 93, 198, 0.5), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+}
+
+.skill::before {
+    top: -50px;
+    left: 20%;
+}
+
+.skill::after {
+    bottom: -50px;
+    right: 25%;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}

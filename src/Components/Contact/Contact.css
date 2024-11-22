@@ -1,0 +1,85 @@
+.contact-form {
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    margin-top: 4rem;
+}
+
+/* Styling untuk teks di sebelah kiri */
+.w-left .awesome {
+    display: flex;
+    flex-direction: column;
+    gap: -5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    margin-top: -10rem; /* Mengurangi jarak margin-top untuk menaikkan teks */
+}
+
+.w-left .awesome span {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.w-left .awesome span:nth-child(2) {
+    color: var(--orange); /* Warna untuk Contact Me */
+}
+
+/* Styling untuk form agar lebih dekat dengan teks */
+.c-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.c-right>form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 0.5rem; /* Mengurangi jarak margin-top agar form lebih dekat */
+}
+
+.c-right .user {
+    width: 20rem;
+    height: 2.5rem;
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 6rem !important;
+    resize: none;
+}
+
+/* Styling untuk tombol */
+.c-right.button {
+    width: 80rem;
+    height: 8rem;
+    border-radius: 10px;
+    background: var(--orange);
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Blur styling */
+.c-blur1 {
+    position: absolute;
+    top: -3rem;
+    right: -4rem;
+    width: 18rem;
+    height: 14rem;
+    filter: blur(72px);
+    background: var(--purple);
+    z-index: -1;
+}

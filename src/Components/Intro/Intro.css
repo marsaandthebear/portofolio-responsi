@@ -1,0 +1,169 @@
+.intro {
+    display: flex;
+    height: 77vh;
+    margin-top: 6rem;
+}
+
+.i-left {
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.i-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.typing-effect {
+    display: inline-block; /* Menjaga layout elemen tetap teratur */
+    height: 5rem; /* Sesuaikan dengan tinggi font (misalnya 3rem) */
+    overflow: hidden; /* Mencegah elemen meluber */
+    white-space: nowrap; /* Mencegah teks turun ke baris baru */
+}
+
+
+.i-name > :nth-child(1) {
+    color: va (--black);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.i-name > :nth-child(2) {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.i-name > :nth-child(3) {
+    font-weight: 100;
+    font-size: 16px;
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+.i-button {
+    width: 6rem;
+    height: 2rem;
+}
+
+.i-icons {
+    margin-top: 3rem;
+    display: flex;
+    gap: 0rem;
+}
+
+.i-icons>*{
+    transform: scale(0.5);
+}
+
+.i-icons>*:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+.i-right {
+    flex: 1;
+    position: relative;
+}
+
+.i-right>* {
+    position: absolute;
+    z-index: 1;
+}
+
+.i-right>:nth-child(1) {
+    transform: scale(0.4);
+    left: -18%;
+    top: -37%;
+    z-index: 1;
+
+}
+
+
+/* Pseudo-element untuk efek pulse */
+.i-right>:nth-child(1)::before {
+    content: ''; /* Pseudo-element sebagai efek tambahan */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); /* Mulai di tengah elemen */
+    width: 85%; /* Ukuran lebih besar dari elemen utama */
+    height: 85%;
+    border-radius: 50%;
+    background: rgba(177, 229, 255, 0.923); /* Warna glow */
+    z-index: -1; /* Di belakang elemen utama */
+    animation: pulse-effect 2s infinite; /* Animasi pulse */
+}
+
+/* Animasi efek pulse */
+@keyframes pulse-effect {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5); /* Membesar */
+        opacity: 0.2;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+
+.i-right>:nth-child(2) {
+    transform: scale(0.5);
+    top: -4rem;
+    left: -2rem;
+}
+
+.i-right>:nth-child(3) {
+    transform: scale(0.35);
+    border-radius: 50%;
+    width: 28vw;
+    top: -3.5rem;
+    left: 14%;
+    box-shadow: 0 0 50px var(--orange);
+    /* cursor: pointer; */
+    transition: 0.4s ease-in-out;
+}
+
+.i-right>:nth-child(4) {
+    transform: scale(0.5);
+    top: -19%;
+    left: -12%;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #edd0ff;
+    filter: blur(50px);
+    z-index: -9;
+    top: -18%;
+    left: 52%;
+}
+
+.i-right>:nth-child(3):hover {
+    box-shadow: 0 0 75px var(--orange),
+                0 0 100px var(--orange),
+                0 0 150px var(--orange)
+}
+
+@media screen and (max-width: 480px) {
+    .Intro {
+      flex-direction: column;
+    }
+  }
